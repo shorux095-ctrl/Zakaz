@@ -1,14 +1,20 @@
 name: Build APK
+
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q Zakazlar.zip -d proj
+      - name: Unzip project
+        run: |
+          ZIP=$(ls -t *.zip | head -n 1)
+          echo "Using: $ZIP"
+          unzip -q "$ZIP" -d proj
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
