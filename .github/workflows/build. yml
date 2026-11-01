@@ -24,3 +24,4 @@ jobs:
         with:
           name: Zakazlar-APK
           path: proj/app/build/outputs/apk/debug/*.apk 
+ 
