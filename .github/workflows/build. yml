@@ -23,4 +23,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: Zakazlar-APK
-          path: proj/app/build/outputs/apk/debug/*.apk
+          path: proj/app/build/outputs/apk/debug/*.apk 
